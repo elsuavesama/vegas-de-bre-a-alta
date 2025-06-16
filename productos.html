@@ -48,38 +48,110 @@
 
   <!-- Catálogo de productos -->
   <main class="relative z-10 max-w-6xl mx-auto px-4 pb-12 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <!-- Productos -->
-    <script>
-      const productos = [
-        { nombre: "Tabaco Clásico", imagen: "tabaco-clasico.jpg", descripcion: "Suave y cremoso, con notas de cedro, café y cuero.", precio: "8,00 €" },
-        { nombre: "Tabaco Robusto", imagen: "tabaco-robusto.jpg", descripcion: "Mezcla fuerte y sabrosa. Fortaleza media.", precio: "8,90 €" },
-        { nombre: "Tabaco Reserva", imagen: "tabaco-reserva.jpg", descripcion: "Edición especial añejada con sabores complejos.", precio: "11,80 €" },
-        { nombre: "Tabaco Dorado", imagen: "tabaco-dorado.jpg", descripcion: "Clásico cubano con cuerpo medio.", precio: "9,90 €" },
-        { nombre: "Tabaco Intenso", imagen: "tabaco-intenso.jpg", descripcion: "Forma puntiaguda. Sabor complejo.", precio: "10,20 €" },
-        { nombre: "Tabaco Maduro", imagen: "tabaco-maduro.jpg", descripcion: "Formato delgado. Fumada prolongada.", precio: "9,30 €" },
-        { nombre: "Tabaco Premium Reserva", imagen: "tabaco-reserva-premium.jpg", descripcion: "Tamaño clásico. Ideal para cualquier momento.", precio: "8,60 €" },
-        { nombre: "Tabaco Suave", imagen: "tabaco-suave.jpg", descripcion: "Edición limitada con mezcla única.", precio: "12,00 €" },
-      ];
+    <!-- Productos insertados manualmente -->
+    <div class="bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="images/tabaco-clasico.jpg" alt="Tabaco Clásico" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">Tabaco Clásico</h3>
+      <p class="mb-2 text-center text-sm sm:text-base text-gray-200">Suave y cremoso, con notas de cedro, café y cuero.</p>
+      <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">8,00 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
+        </svg>
+        Añadir al carrito
+      </button>
+    </div>
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const contenedor = document.querySelector("main");
-        productos.forEach(prod => {
-          contenedor.innerHTML += `
-          <div class='bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out'>
-            <img src="images/${prod.imagen}" alt="${prod.nombre}" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
-            <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">${prod.nombre}</h3>
-            <p class="mb-2 text-center text-sm sm:text-base text-gray-200">${prod.descripcion}</p>
-            <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">${prod.precio}</p>
-            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
-              </svg>
-              Añadir al carrito
-            </button>
-          </div>`
-        });
-      });
-    </script>
+    <div class="bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="images/tabaco-robusto.jpg" alt="Tabaco Robusto" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">Tabaco Robusto</h3>
+      <p class="mb-2 text-center text-sm sm:text-base text-gray-200">Mezcla fuerte y sabrosa. Fortaleza media.</p>
+      <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">8,90 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
+        </svg>
+        Añadir al carrito
+      </button>
+    </div>
+
+    <div class="bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="images/tabaco-reserva.jpg" alt="Tabaco Reserva" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">Tabaco Reserva</h3>
+      <p class="mb-2 text-center text-sm sm:text-base text-gray-200">Edición especial añejada con sabores complejos.</p>
+      <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">11,80 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
+        </svg>
+        Añadir al carrito
+      </button>
+    </div>
+
+    <div class="bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="images/tabaco-dorado.jpg" alt="Tabaco Dorado" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">Tabaco Dorado</h3>
+      <p class="mb-2 text-center text-sm sm:text-base text-gray-200">Clásico cubano con cuerpo medio. Aroma persistente y sabor envolvente.</p>
+      <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">9,90 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
+        </svg>
+        Añadir al carrito
+      </button>
+    </div>
+
+    <div class="bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="images/tabaco-intenso.jpg" alt="Tabaco Intenso" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">Tabaco Intenso</h3>
+      <p class="mb-2 text-center text-sm sm:text-base text-gray-200">Forma puntiaguda para un encendido más preciso. Sabor complejo y elegante.</p>
+      <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">10,20 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
+        </svg>
+        Añadir al carrito
+      </button>
+    </div>
+
+    <div class="bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="images/tabaco-maduro.jpg" alt="Tabaco Maduro" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">Tabaco Maduro</h3>
+      <p class="mb-2 text-center text-sm sm:text-base text-gray-200">Formato delgado que resalta sabores y aromas. Fumada prolongada.</p>
+      <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">9,30 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
+        </svg>
+        Añadir al carrito
+      </button>
+    </div>
+
+    <div class="bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="images/tabaco-reserva-premium.jpg" alt="Tabaco Premium Reserva" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">Tabaco Premium Reserva</h3>
+      <p class="mb-2 text-center text-sm sm:text-base text-gray-200">Tamaño clásico y balanceado. Ideal para cualquier momento del día.</p>
+      <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">8,60 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
+        </svg>
+        Añadir al carrito
+      </button>
+    </div>
+
+    <div class="bg-black/50 backdrop-blur-sm rounded-xl shadow-xl p-6 flex flex-col items-center border border-white/10 hover:scale-105 transition-transform duration-300 ease-in-out">
+      <img src="images/tabaco-suave.jpg" alt="Tabaco Suave" class="rounded mb-4 shadow aspect-[4/3] object-cover w-full" />
+      <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 text-green-100 text-center">Tabaco Suave</h3>
+      <p class="mb-2 text-center text-sm sm:text-base text-gray-200">Edición limitada con mezcla única. Para conocedores exigentes.</p>
+      <p class="text-sm sm:text-base md:text-lg font-bold text-green-400 mb-4">12,00 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13l-1.5-7M7 13h10m-4 7a1 1 0 11-2 0" />
+        </svg>
+        Añadir al carrito
+      </button>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -88,3 +160,4 @@
   </footer>
 </body>
 </html>
+
