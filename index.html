@@ -17,7 +17,6 @@
     body, section {
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
       background-repeat: no-repeat;
     }
   </style>
@@ -38,11 +37,17 @@
     </div>
   </header>
 
-  <!-- Sección Inicio -->
-  <section id="inicio" class="min-h-screen flex items-center justify-center text-center bg-cover bg-fixed" style="background-image: url('images/hero-vegas.jpg');">
+  <!-- Sección Inicio (mejorada) -->
+  <section id="inicio" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+    <!-- Imagen de fondo adaptativa -->
+    <img src="images/hero-vegas.jpg" alt="Fondo hero Vegas" class="absolute inset-0 w-full h-full object-cover object-center -z-10" />
+
+    <!-- Contenido encima -->
     <div class="bg-black bg-opacity-60 backdrop-blur-md p-6 rounded-xl max-w-2xl mx-4" data-scroll>
       <h2 class="text-4xl font-bold text-green-300 mb-4">Bienvenido a Vegas de Breña Alta</h2>
-      <p class="text-lg text-gray-200">Tabaco artesanal de calidad, cultivado en las tierras volcánicas de La Palma.</p>
+      <p class="text-lg text-gray-200">
+        Tabaco artesanal de calidad, cultivado en las tierras volcánicas de La Palma.
+      </p>
     </div>
   </section>
 
@@ -120,6 +125,6 @@
       animation: fade-in 0.8s ease-out forwards;
     }
   </style>
+
 </body>
 </html>
-
