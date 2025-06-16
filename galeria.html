@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería - Vegas de Breña Alta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('images/fondo-galeria.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body class="text-gray-100">
+  <!-- Navegación -->
+  <header class="bg-black bg-opacity-60 shadow-md sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-xl md:text-2xl font-bold text-green-200 mb-2 md:mb-0 text-center">Vegas de Breña Alta</h1>
+      <nav class="flex flex-wrap justify-center space-x-4 text-gray-200">
+        <a href="index.html" class="hover:underline">Inicio</a>
+        <a href="nosotros.html" class="hover:underline">Nosotros</a>
+        <a href="productos.html" class="hover:underline">Productos</a>
+        <a href="galeria.html" class="text-green-300 font-semibold underline">Galería</a>
+        <a href="contacto.html" class="hover:underline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Galería -->
+  <section class="py-20 min-h-[calc(100vh-160px)]">
+    <div class="max-w-6xl mx-auto px-4 bg-black bg-opacity-40 backdrop-blur-sm rounded-xl p-6">
+      <h2 class="text-4xl font-bold text-green-200 text-center mb-12">Galería de Imágenes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Imagen 1 -->
+        <div class="overflow-hidden rounded-lg shadow-xl">
+          <img src="images/galeria1.jpg" alt="Tabaco artesanal 1" class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-105">
+        </div>
+        <!-- Imagen 2 -->
+        <div class="overflow-hidden rounded-lg shadow-xl">
+          <img src="images/galeria2.jpg" alt="Tabaco artesanal 2" class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-105">
+        </div>
+        <!-- Imagen 3 -->
+        <div class="overflow-hidden rounded-lg shadow-xl">
+          <img src="images/galeria3.jpg" alt="Tabaco artesanal 3" class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-105">
+        </div>
+        <!-- Imagen 4 -->
+        <div class="overflow-hidden rounded-lg shadow-xl">
+          <img src="images/galeria4.jpg" alt="Fábrica de tabaco" class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-105">
+        </div>
+        <!-- Imagen 5 -->
+        <div class="overflow-hidden rounded-lg shadow-xl">
+          <img src="images/galeria5.jpg" alt="Producción de tabaco" class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-105">
+        </div>
+        <!-- Imagen 6 -->
+        <div class="overflow-hidden rounded-lg shadow-xl">
+          <img src="images/galeria6.jpg" alt="Hoja de tabaco" class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-105">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p class="text-xs text-gray-300">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
