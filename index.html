@@ -1,57 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Vegas de Breña Alta</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
+    html {
+      scroll-behavior: smooth;
     }
+
     body {
-      background-image: url('images/hero-vegas.jpg');
+      background-color: #000;
+    }
+
+    body, section {
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
     }
-    nav a {
-      display: inline-block;
-      min-width: 85px;
-      text-align: center;
-    }
   </style>
 </head>
-<body class="text-gray-100 min-h-screen">
-  <!-- Navegación -->
-  <header class="bg-black bg-opacity-60 shadow-md sticky top-0 z-50 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-      <h1 class="text-xl md:text-2xl font-bold text-green-200 mb-2 md:mb-0 text-center">Vegas de Breña Alta</h1>
-      <nav class="flex flex-wrap justify-center space-x-4 text-gray-200">
-        <a href="index.html" class="text-green-300 font-semibold underline">Inicio</a>
-        <a href="nosotros.html" class="hover:underline">Nosotros</a>
-        <a href="productos.html" class="hover:underline">Productos</a>
-        <a href="galeria.html" class="hover:underline">Galería</a>
-        <a href="contacto.html" class="hover:underline">Contacto</a>
+<body class="text-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header de navegación -->
+  <header id="main-header" class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 transition-all duration-300 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+      <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
+      <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
+        <a href="#inicio" class="hover:text-green-300">Inicio</a>
+        <a href="#nosotros" class="hover:text-green-300">Nosotros</a>
+        <a href="#productos" class="hover:text-green-300">Productos</a>
+        <a href="#galeria" class="hover:text-green-300">Galería</a>
+        <a href="#contacto" class="hover:text-green-300">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero principal -->
-  <section class="relative flex flex-col justify-center items-center text-center px-4 py-12" style="min-height: calc(100vh - 100px);">
-    <div class="bg-black bg-opacity-60 p-6 md:p-10 rounded-xl shadow-xl max-w-3xl w-full backdrop-blur">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl text-green-200 font-bold mb-4 drop-shadow-md">El arte del tabaco nace en Breña Alta</h2>
-      <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-6">Tabacos artesanales con tradición canaria</p>
-      <a href="productos.html" class="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-xl shadow-lg text-base md:text-lg">Ver Productos</a>
+  <!-- Sección Inicio -->
+  <section id="inicio" class="min-h-screen flex items-center justify-center text-center bg-cover bg-fixed" style="background-image: url('images/hero-vegas.jpg');">
+    <div class="bg-black bg-opacity-60 backdrop-blur-md p-6 rounded-xl max-w-2xl mx-4" data-scroll>
+      <h2 class="text-4xl font-bold text-green-300 mb-4">Bienvenido a Vegas de Breña Alta</h2>
+      <p class="text-lg text-gray-200">Tabaco artesanal de calidad, cultivado en las tierras volcánicas de La Palma.</p>
+    </div>
+  </section>
+
+  <!-- Sección Nosotros -->
+  <section id="nosotros" class="py-16 px-4 bg-black bg-opacity-70" data-scroll>
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-green-200 mb-6">Nuestra Historia</h2>
+      <p class="text-base sm:text-lg text-gray-300 leading-relaxed text-justify">
+        En Vegas de Breña Alta nos dedicamos a preservar la tradición del tabaco artesanal, cultivado con esmero en tierras volcánicas canarias.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Productos -->
+  <section id="productos" class="py-16 px-4 bg-black bg-opacity-60" data-scroll>
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-green-200 mb-6">Nuestros Productos</h2>
+      <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+        Desde tabacos suaves hasta intensos, seleccionados hoja a hoja.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Galería -->
+  <section id="galeria" class="py-16 px-4 bg-black bg-opacity-60" data-scroll>
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-green-200 mb-6">Galería</h2>
+      <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+        Descubre el proceso de producción y nuestras vegas naturales.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="py-16 px-4 bg-black bg-opacity-60" data-scroll>
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-green-200 mb-6">Contacto</h2>
+      <p class="text-base sm:text-lg text-gray-300 mb-4">¿Quieres saber más o hacer un pedido personalizado?</p>
+      <a href="https://wa.me/34628478904" class="inline-block mt-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
+        Escríbenos por WhatsApp
+      </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-4 mt-12">
-    <p class="text-xs text-gray-300">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
+  <footer class="text-center py-6 bg-black bg-opacity-80">
+    <p class="text-sm text-gray-400">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Efecto de entrada al hacer scroll -->
+  <script>
+    const elements = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          entry.target.classList.remove('opacity-0', 'translate-y-8');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => {
+      el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
+      observer.observe(el);
+    });
+  </script>
+
+  <!-- Animaciones personalizadas -->
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.8s ease-out forwards;
+    }
+  </style>
 </body>
 </html>
+
