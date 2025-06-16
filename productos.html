@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - Vegas de Breña Alta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('images/fondo-productos.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+    nav a {
+      display: inline-block;
+      min-width: 85px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="text-gray-100">
+  <!-- Navegación -->
+  <header class="bg-black bg-opacity-60 shadow-md sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
+      <nav class="flex space-x-4 text-gray-200" style="min-width: 360px; justify-content: center;">
+        <a href="index.html" class="hover:underline">Inicio</a>
+        <a href="nosotros.html" class="hover:underline">Nosotros</a>
+        <a href="productos.html" class="text-green-300 font-semibold underline">Productos</a>
+        <a href="contacto.html" class="hover:underline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Título -->
+  <section class="text-center py-10 bg-black bg-opacity-60 backdrop-blur-sm">
+    <h2 class="text-4xl font-bold text-green-200 drop-shadow-md">Nuestros Tabacos Artesanales</h2>
+    <p class="text-lg text-gray-300 mt-2">Elige tu estilo y sabor favorito</p>
+  </section>
+
+  <!-- Catálogo de productos -->
+  <main class="relative z-10 max-w-6xl mx-auto px-4 pb-12 grid md:grid-cols-3 gap-8">
+    <!-- Producto 1 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-clasico.jpg" alt="Tabaco Clásico" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Tabaco Clásico</h3>
+      <p class="mb-2 text-center">Suave y cremoso, con notas de cedro, café y cuero. Elaborado 100 % de forma artesanal.</p>
+      <p class="font-semibold text-green-400 mb-4">8,00 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-robusto.jpg" alt="Tabaco Robusto" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Tabaco Robusto</h3>
+      <p class="mb-2 text-center">Mezcla fuerte y sabrosa. Tabaco nicaragüense 100 % orgánico. Fortaleza media.</p>
+      <p class="font-semibold text-green-400 mb-4">8,90 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-reserva.jpg" alt="Tabaco Reserva" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Tabaco Reserva</h3>
+      <p class="mb-2 text-center">Edición especial añejada con sabores complejos. Ceniza firme y tiro limpio, una delicia al paladar.</p>
+      <p class="font-semibold text-green-400 mb-4">11,80 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+  <!-- Producto 4 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-suave.jpg" alt="Tabaco Suave" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Tabaco Suave</h3>
+      <p class="mb-2 text-center">Ideal para fumadas ligeras. Notas dulces y textura delicada.</p>
+      <p class="font-semibold text-green-400 mb-4">7,50 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-intenso.jpg" alt="Tabaco Intenso" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Tabaco Intenso</h3>
+      <p class="mb-2 text-center">Cuerpo fuerte con aroma robusto. Ideal para los amantes del sabor profundo.</p>
+      <p class="font-semibold text-green-400 mb-4">9,20 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 6 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-dorado.jpg" alt="Tabaco Dorado" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Tabaco Dorado</h3>
+      <p class="mb-2 text-center">Curado al sol para un acabado suave y sabor cálido.</p>
+      <p class="font-semibold text-green-400 mb-4">10,00 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 7 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-maduro.jpg" alt="Tabaco Maduro" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Tabaco Maduro</h3>
+      <p class="mb-2 text-center">Envejecido por más tiempo para un perfil de sabor más rico y oscuro.</p>
+      <p class="font-semibold text-green-400 mb-4">11,00 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 8 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-reserva-premium.jpg" alt="Tabaco Reserva Premium" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Reserva Premium</h3>
+      <p class="mb-2 text-center">Selección especial de hojas envejecidas con un sabor excepcionalmente suave.</p>
+      <p class="font-semibold text-green-400 mb-4">13,50 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 9 -->
+    <div class="bg-black bg-opacity-60 text-white rounded-xl shadow-lg p-6 flex flex-col items-center backdrop-blur">
+      <img src="images/tabaco-canario.jpg" alt="Tabaco Canario" class="rounded mb-4 shadow">
+      <h3 class="text-xl font-bold mb-2">Tabaco Canario</h3>
+      <p class="mb-2 text-center">Cultivado en tierras volcánicas. Sabor suave y equilibrado con notas herbales.</p>
+      <p class="font-semibold text-green-400 mb-4">9,00 €</p>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-all duration-200">Añadir al carrito</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-12">
+    <p class="text-xs text-gray-300">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
