@@ -46,19 +46,38 @@
 </head>
 <body class="fade-in text-gray-100 min-h-screen flex flex-col">
 
-  <!-- Header de navegación -->
-  <header id="main-header" class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 transition-all duration-300 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+  <!-- Encabezado unificado con hamburguesa -->
+  <header class="bg-black bg-opacity-60 shadow-md sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
-      <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
+
+      <!-- Botón hamburguesa -->
+      <button id="menu-btn" class="sm:hidden text-green-200 focus:outline-none" aria-label="Menú">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menú escritorio -->
+      <nav id="menu-desktop" class="hidden sm:flex gap-4 text-sm sm:text-base text-gray-200">
         <a href="index.html" class="hover:text-green-300">Inicio</a>
         <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
         <a href="productos.html" class="hover:text-green-300">Productos</a>
         <a href="galeria.html" class="text-green-300 font-semibold">Galería</a>
-        <a href="videos.html" class="hover:text-green-300">Detras del Puro</a>
+        <a href="videos.html" class="hover:text-green-300">Detrás del Puro</a>
         <a href="contacto.html" class="hover:text-green-300">Contacto</a>
       </nav>
     </div>
+
+    <!-- Menú hamburguesa (móvil) -->
+    <nav id="menu-mobile" class="sm:hidden hidden flex flex-col items-center gap-3 text-gray-200 text-sm py-2">
+      <a href="index.html" class="hover:text-green-300">Inicio</a>
+      <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
+      <a href="productos.html" class="hover:text-green-300">Productos</a>
+      <a href="galeria.html" class="text-green-300 font-semibold">Galería</a>
+      <a href="videos.html" class="hover:text-green-300">Detrás del Puro</a>
+      <a href="contacto.html" class="hover:text-green-300">Contacto</a>
+    </nav>
   </header>
 
   <!-- Galería -->
@@ -110,7 +129,7 @@
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/fullscreen/lg-fullscreen.min.js"></script>
 
-  <!-- Inicialización + Música -->
+  <!-- Inicialización galería + música -->
   <script>
     lightGallery(document.getElementById('lightgallery'), {
       selector: 'a',
@@ -146,9 +165,17 @@
         }).catch(() => {});
       }
     }, { once: true });
+
+    // Script menú hamburguesa
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('menu-mobile');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
+
 
 
 
