@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vegas de Breña Alta</title>
+  <title>Contacto - Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Fonts -->
@@ -21,14 +21,11 @@
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-color: black;
+      font-family: 'Lora', serif;
     }
 
     .titulo {
       font-family: 'Playfair Display', serif;
-    }
-
-    .parrafo {
-      font-family: 'Lora', serif;
     }
 
     .fade-in {
@@ -41,40 +38,26 @@
     }
   </style>
 </head>
-<body class="fade-in text-gray-100 min-h-screen flex flex-col">
 
+<body class="fade-in text-gray-100 min-h-screen flex flex-col">
   <!-- Header de navegación -->
   <header id="main-header" class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 transition-all duration-300 shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-      <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
-      <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
-        <a href="index.html" class="thover:text-green-300">Inicio</a>
-        <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
-        <a href="productos.html" class="hover:text-green-300">Productos</a>
-        <a href="galeria.html" class="hover:text-green-300">Galería</a>
-        <a href="contacto.html" class="text-green-300 font-semibold">Contacto</a>
-      </nav>
-    </div>
-  </header>
-<body class="text-gray-100 min-h-screen flex flex-col">
-  <!-- Navegación -->
-  <header class="bg-black bg-opacity-60 shadow-md sticky top-0 z-50 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
-      <h1 class="text-xl md:text-2xl font-bold text-green-200 text-center transition duration-300 hover:scale-105">Vegas de Breña Alta</h1>
-      <nav class="flex flex-wrap justify-center gap-2 text-sm md:text-base text-gray-200">
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="productos.html">Productos</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html" class="text-green-300 font-semibold underline scale-105">Contacto</a>
+      <h1 class="text-xl sm:text-2xl font-bold text-green-200 titulo hover:scale-105 transition">Vegas de Breña Alta</h1>
+      <nav class="flex flex-wrap justify-center gap-3 text-gray-200 text-sm sm:text-base">
+        <a href="index.html" class="hover:text-green-300 transition">Inicio</a>
+        <a href="nosotros.html" class="hover:text-green-300 transition">Nosotros</a>
+        <a href="productos.html" class="hover:text-green-300 transition">Productos</a>
+        <a href="galeria.html" class="hover:text-green-300 transition">Galería</a>
+        <a href="contacto.html" class="text-green-300 font-semibold underline scale-105 transition">Contacto</a>
       </nav>
     </div>
   </header>
 
   <!-- Contenido principal -->
-  <main class="flex-grow flex items-center justify-center px-4 py-10 sm:py-14 font-sans">
+  <main class="flex-grow flex items-center justify-center px-4 py-10 sm:py-14">
     <section class="relative z-10 w-full max-w-[95%] md:max-w-2xl bg-black bg-opacity-70 rounded-2xl shadow-xl backdrop-blur p-6 sm:p-8 transition duration-300 hover:shadow-2xl">
-      <h2 class="text-3xl sm:text-4xl font-bold text-green-200 mb-6 text-center">Contáctanos</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold text-green-200 mb-6 text-center titulo">Contáctanos</h2>
       <p class="text-base sm:text-lg text-gray-300 mb-6 text-center">Puedes escribirnos, llamarnos o enviarnos un WhatsApp. Te responderemos lo antes posible.</p>
 
       <!-- Información de contacto -->
@@ -82,7 +65,7 @@
         <p><span class="text-green-400 font-semibold">📧 Email:</span> info@vegasbrena.com</p>
         <p><span class="text-green-400 font-semibold">📞 Teléfono:</span> +34 922 123 456</p>
         <p><span class="text-green-400 font-semibold">📍 Dirección:</span> Calle Real 12, Breña Alta, Santa Cruz de La Palma</p>
-        <p><span class="text-green-400 font-semibold">💬 WhatsApp:</span> <a href="https://wa.me/34628478904" target="_blank" class="underline hover:text-green-300 transition duration-300">+34 628 478 904</a></p>
+        <p><span class="text-green-400 font-semibold">💬 WhatsApp:</span> <a href="https://wa.me/34628478904" target="_blank" class="underline hover:text-green-300 transition">+34 628 478 904</a></p>
         <p><span class="text-green-400 font-semibold">🕒 Horario de atención:</span> Lunes a Sábado, de 9:00 a 18:00</p>
       </div>
 
@@ -132,3 +115,4 @@
   </footer>
 </body>
 </html>
+
