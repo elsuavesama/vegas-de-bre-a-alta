@@ -9,6 +9,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&display=swap" rel="stylesheet" />
 
+  <!-- LightGallery CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -100,9 +103,14 @@
     ▶️ Música
   </div>
 
-  <!-- Scripts -->
+  <!-- LightGallery Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/fullscreen/lg-fullscreen.min.js"></script>
+
+  <!-- Inicialización + Música -->
   <script>
-    // Inicializar galería interactiva
     lightGallery(document.getElementById('lightgallery'), {
       selector: 'a',
       plugins: [lgZoom, lgThumbnail, lgFullscreen],
@@ -112,7 +120,6 @@
       hideBarsDelay: 3000
     });
 
-    // Control de música
     const musica = document.getElementById('musicaFondo');
     const boton = document.getElementById('botonMusica');
     let reproduciendo = false;
@@ -129,7 +136,6 @@
       reproduciendo = !reproduciendo;
     }
 
-    // Primer clic activa la música si aún no lo hizo
     document.addEventListener('click', () => {
       if (!reproduciendo) {
         musica.volume = 0.3;
@@ -142,6 +148,7 @@
   </script>
 </body>
 </html>
+
 
 
 
