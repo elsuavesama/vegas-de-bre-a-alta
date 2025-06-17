@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&display=swap" rel="stylesheet" />
@@ -40,14 +41,22 @@
     }
   </style>
 </head>
-<body class="fade-in text-gray-100 min-h-screen flex flex-col">
+<body class="fade-in text-gray-100 min-h-screen flex flex-col" x-data="{ open: false }">
 
   <!-- Header -->
   <header class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
-      <button id="menu-btn" class="text-green-300 text-3xl sm:hidden focus:outline-none">&#9776;</button>
-      <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:items-center gap-3 text-gray-200 sm:static absolute top-full left-0 w-full bg-black bg-opacity-90 sm:bg-transparent p-4 sm:p-0 transition-all duration-300 ease-in-out">
+
+      <!-- Botón hamburguesa -->
+      <button @click="open = !open" class="sm:hidden text-gray-200 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Navegación Escritorio -->
+      <nav class="hidden sm:flex space-x-4 text-gray-200">
         <a href="index.html" class="hover:text-green-300">Inicio</a>
         <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
         <a href="productos.html" class="hover:text-green-300">Productos</a>
@@ -55,6 +64,16 @@
         <a href="videos.html" class="text-green-300 font-semibold">Detrás del Puro</a>
         <a href="contacto.html" class="hover:text-green-300">Contacto</a>
       </nav>
+    </div>
+
+    <!-- Menú Móvil -->
+    <div x-show="open" class="sm:hidden px-4 pb-4 space-y-2 text-center text-gray-200">
+      <a href="index.html" class="block hover:text-green-300">Inicio</a>
+      <a href="nosotros.html" class="block hover:text-green-300">Nosotros</a>
+      <a href="productos.html" class="block hover:text-green-300">Productos</a>
+      <a href="galeria.html" class="block hover:text-green-300">Galería</a>
+      <a href="videos.html" class="block text-green-300 font-semibold">Detrás del Puro</a>
+      <a href="contacto.html" class="block hover:text-green-300">Contacto</a>
     </div>
   </header>
 
@@ -68,20 +87,67 @@
 
   <!-- Galería de videos -->
   <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
-    <!-- Video thumbnails automáticos -->
-    <!-- Video 1 al 10 -->
-    <!-- Puedes repetir este bloque cambiando el número -->
-    <!-- Bloques de videos (idénticos al anterior) -->
-    " + Array.from({length: 10}, (_, i) => {
-      const n = i + 1;
-      return `
-    <div class="cursor-pointer group" onclick="openModal('videos/video${n}.mp4')">
+    <!-- 10 Videos Manuales -->
+    <div class="cursor-pointer group" onclick="openModal('videos/video1.mp4')">
       <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video${n}.mp4" type="video/mp4">
+        <source src="videos/video1.mp4" type="video/mp4">
       </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video ${n}</p>
-    </div>`;
-    }).join("\n") + "
+      <p class="mt-2 text-center text-green-300 font-medium">Video 1</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video2.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video2.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 2</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video3.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video3.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 3</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video4.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video4.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 4</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video5.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video5.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 5</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video6.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video6.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 6</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video7.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video7.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 7</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video8.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video8.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 8</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video9.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video9.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 9</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openModal('videos/video10.mp4')">
+      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
+        <source src="videos/video10.mp4" type="video/mp4">
+      </video>
+      <p class="mt-2 text-center text-green-300 font-medium">Video 10</p>
+    </div>
   </section>
 
   <!-- Modal para reproducir videos -->
@@ -103,7 +169,7 @@
     © 2025 Vegas de Breña Alta. Todos los derechos reservados.
   </footer>
 
-  <!-- Script modal y menú hamburguesa -->
+  <!-- Script modal -->
   <script>
     function openModal(videoUrl) {
       const video = document.getElementById('videoPlayer');
@@ -121,16 +187,7 @@
       video.currentTime = 0;
       modal.classList.add('hidden');
     }
-
-    // Menú hamburguesa
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
   </script>
 </body>
 </html>
-
 
