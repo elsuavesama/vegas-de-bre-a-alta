@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería - Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- LightGallery -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
@@ -72,19 +72,19 @@
   </footer>
 
   <!-- Reproductor de música -->
-  <audio id="musicaFondo" loop>
+  <audio id="musicaFondo" loop preload="auto">
     <source src="audio/chan-chan.mp3" type="audio/mpeg">
     Tu navegador no soporta audio HTML5.
   </audio>
 
   <!-- Botón para controlar la música -->
-  <div class="fixed bottom-4 left-4 z-50 bg-black bg-opacity-60 text-white px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-opacity-80 transition" onclick="toggleMusica()">
-    🎵 Música
+  <div id="botonMusica" class="fixed bottom-4 left-4 z-50 bg-green-700 text-white px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-green-600 transition" onclick="toggleMusica()">
+    ▶️ Música
   </div>
 
   <!-- Scripts -->
   <script>
-    // Inicializar galería
+    // Inicializar galería interactiva
     lightGallery(document.getElementById('lightgallery'), {
       selector: 'a',
       plugins: [lgZoom, lgThumbnail, lgFullscreen],
@@ -94,31 +94,37 @@
       hideBarsDelay: 3000
     });
 
-    // Música
+    // Control de música
     const musica = document.getElementById('musicaFondo');
+    const boton = document.getElementById('botonMusica');
     let reproduciendo = false;
 
     function toggleMusica() {
       if (reproduciendo) {
         musica.pause();
+        boton.innerHTML = '▶️ Música';
       } else {
-        musica.play();
+        musica.volume = 0.3;
+        musica.play().catch(() => {});
+        boton.innerHTML = '⏸️ Música';
       }
       reproduciendo = !reproduciendo;
     }
 
-    window.addEventListener("DOMContentLoaded", () => {
-      setTimeout(() => {
+    // Primer clic activa la música si aún no lo hizo
+    document.addEventListener('click', () => {
+      if (!reproduciendo) {
         musica.volume = 0.3;
-        musica.play().catch(() => {
-          // Espera interacción en móviles
-        });
-        reproduciendo = true;
-      }, 1000);
-    });
+        musica.play().then(() => {
+          reproduciendo = true;
+          boton.innerHTML = '⏸️ Música';
+        }).catch(() => {});
+      }
+    }, { once: true });
   </script>
 </body>
 </html>
+
 
 
 
