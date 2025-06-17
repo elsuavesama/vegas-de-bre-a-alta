@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" x-data="{ open: false }" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&display=swap" rel="stylesheet" />
@@ -43,18 +44,35 @@
 </head>
 <body class="fade-in text-gray-100 min-h-screen flex flex-col">
 
-  <!-- Header -->
+  <!-- Header con menú plegable -->
   <header class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
-      <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
+
+      <!-- Botón hamburguesa -->
+      <button @click="open = !open" class="sm:hidden text-gray-200 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navegación -->
+      <nav class="hidden sm:flex space-x-4 text-gray-200">
         <a href="index.html" class="text-green-300 font-semibold">Inicio</a>
         <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
         <a href="productos.html" class="hover:text-green-300">Productos</a>
         <a href="galeria.html" class="hover:text-green-300">Galería</a>
-        <a href="videos.html" class="hover:text-green-300">Detras del Puro</a>
         <a href="contacto.html" class="hover:text-green-300">Contacto</a>
       </nav>
+    </div>
+
+    <!-- Menú desplegable móvil -->
+    <div x-show="open" class="sm:hidden px-4 pb-4 space-y-2 text-center text-gray-200 transition-all duration-300">
+      <a href="index.html" class="block hover:text-green-300">Inicio</a>
+      <a href="nosotros.html" class="block hover:text-green-300">Nosotros</a>
+      <a href="productos.html" class="block hover:text-green-300">Productos</a>
+      <a href="galeria.html" class="block hover:text-green-300">Galería</a>
+      <a href="contacto.html" class="block hover:text-green-300">Contacto</a>
     </div>
   </header>
 
@@ -70,12 +88,12 @@
     </div>
   </main>
 
-  <!-- Footer con botones -->
+  <!-- Footer con redes sociales -->
   <footer class="mt-auto text-center bg-black bg-opacity-50">
     <div class="py-6 flex justify-center gap-4 flex-wrap">
       <!-- Facebook -->
       <a class="bg-black/40 hover:bg-blue-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition duration-300 shadow-md">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82V14.709h-3.39v-3.622h3.39V8.413c0-3.36 2.051-5.191 5.045-5.191 1.433 0 2.664.107 3.021.155v3.505h-2.073c-1.625 0-1.938.772-1.938 1.902v2.496h3.877l-.506 3.622h-3.371V24h6.615C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
         </svg>
         Facebook
@@ -83,24 +101,25 @@
 
       <!-- Instagram -->
       <a class="bg-black/40 hover:bg-pink-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition duration-300 shadow-md">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 448 512">
-          <path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.14-41.1A24,24,0,1,0,372.14,185,24,24,0,0,0,348.14,161.56ZM398.8,80C375.15,69.63,337.28,64,258.9,64S142.75,69.63,119.2,80A48,48,0,0,0,80,119.2c-11,26.55-16,64.42-16,142.8s5,116.25,16,142.8A48,48,0,0,0,119.2,432c26.55,11,64.42,16,142.8,16s116.25-5,142.8-16A48,48,0,0,0,432,398.8c11-26.55,16-64.42,16-142.8S443,142.75,432,119.2A48,48,0,0,0,398.8,80Zm-174.8,258a82,82,0,1,1,82-82A82.09,82.09,0,0,1,224,338Z"/>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 448 512">
+          <path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66ZM398.8,80A48,48,0,0,1,432,113.2c11,26.55,16,64.42,16,142.8s-5,116.25-16,142.8A48,48,0,0,1,398.8,432c-26.55,11-64.42,16-142.8,16s-116.25-5-142.8-16A48,48,0,0,1,48,398.8c-11-26.55-16-64.42-16-142.8S37,139.75,48,113.2A48,48,0,0,1,81.2,80C107.75,69,145.62,64,224,64S340.25,69,366.8,80ZM224,338a82,82,0,1,1,82-82A82.09,82.09,0,0,1,224,338ZM352,160a24,24,0,1,1-24-24A24,24,0,0,1,352,160Z"/>
         </svg>
         Instagram
       </a>
 
       <!-- WhatsApp -->
       <a class="bg-black/40 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition duration-300 shadow-md">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 448 512">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 448 512">
           <path d="M380.9 97.1C339-3.1 224.5-25.4 136.7 24.3S-1.4 218.9 39.2 311.6L2.3 437.4c-4.5 15.2 9.4 28.6 24.5 24.1l125.8-36.8c92.8 40.6 200.6-2.5 241.3-94.7 40.6-92.8-2.6-200.6-94.7-241.3zM224 366.7c-79 0-143.4-64.4-143.4-143.4S145 80 224 80s143.4 64.4 143.4 143.4S303 366.7 224 366.7zm76.3-108.3-23.7-6.7c-3.2-.9-6.7.1-9 2.4l-10.6 10.8c-29.5-15.6-48.2-33.5-63.8-63.8l10.8-10.6c2.3-2.3 3.3-5.8 2.4-9l-6.7-23.7c-1.3-4.7-5.7-7.9-10.5-7.9h-21.4c-6.2 0-11.4 5.2-10.8 11.4 6.5 71.9 61.3 126.7 133.2 133.2 6.2.6 11.4-4.6 11.4-10.8v-21.4c0-4.9-3.2-9.3-7.9-10.5z"/>
         </svg>
         WhatsApp
       </a>
     </div>
 
-    <!-- Copyright -->
+    <!-- Derechos -->
     <p class="text-xs text-gray-300 pb-4">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
   </footer>
 
 </body>
 </html>
+
