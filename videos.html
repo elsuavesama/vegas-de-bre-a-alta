@@ -58,69 +58,61 @@
     </div>
   </header>
 
-  <!-- Título -->
+ <!-- Título -->
   <section class="text-center px-4 py-10 bg-black bg-opacity-60 backdrop-blur">
-    <h2 class="text-4xl font-semibold text-green-300 mb-4">Videos de Puros y Curiosidades</h2>
-    <p class="max-w-2xl mx-auto text-gray-300">Explora nuestro contenido en video sobre la tradición tabacalera, curiosidades y más.</p>
+    <h2 class="text-4xl font-semibold text-green-300 mb-4">Detrás del Puro</h2>
+    <p class="max-w-2xl mx-auto text-gray-300">
+      Explora nuestro contenido en video sobre la tradición tabacalera, curiosidades y el proceso artesanal de nuestros puros.
+    </p>
   </section>
 
   <!-- Galería de videos -->
   <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
-    <!-- Reemplaza los videos y miniaturas por tus archivos -->
     <!-- Video 1 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video1.mp4')">
       <img src="images/thumb1.jpg" alt="Video 1" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
       <p class="mt-2 text-center text-green-300 font-medium">Cómo se enrolla un puro</p>
     </div>
-
     <!-- Video 2 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video2.mp4')">
       <img src="images/thumb2.jpg" alt="Video 2" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
       <p class="mt-2 text-center text-green-300 font-medium">Curiosidades del tabaco</p>
     </div>
-
     <!-- Video 3 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video3.mp4')">
       <img src="images/thumb3.jpg" alt="Video 3" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
       <p class="mt-2 text-center text-green-300 font-medium">Fermentación del tabaco</p>
     </div>
-
     <!-- Video 4 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video4.mp4')">
       <img src="images/thumb4.jpg" alt="Video 4" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
-      <p class="mt-2 text-center text-green-300 font-medium">Cómo se corta un puro</p>
+      <p class="mt-2 text-center text-green-300 font-medium">Corte tradicional del puro</p>
     </div>
-
     <!-- Video 5 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video5.mp4')">
       <img src="images/thumb5.jpg" alt="Video 5" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
-      <p class="mt-2 text-center text-green-300 font-medium">Curado de las hojas</p>
+      <p class="mt-2 text-center text-green-300 font-medium">Curado de hojas de tabaco</p>
     </div>
-
     <!-- Video 6 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video6.mp4')">
       <img src="images/thumb6.jpg" alt="Video 6" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
       <p class="mt-2 text-center text-green-300 font-medium">El aroma de un buen tabaco</p>
     </div>
-
     <!-- Video 7 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video7.mp4')">
       <img src="images/thumb7.jpg" alt="Video 7" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
-      <p class="mt-2 text-center text-green-300 font-medium">¿Qué es un torcedor?</p>
+      <p class="mt-2 text-center text-green-300 font-medium">Qué es un torcedor</p>
     </div>
-
     <!-- Video 8 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video8.mp4')">
       <img src="images/thumb8.jpg" alt="Video 8" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
-      <p class="mt-2 text-center text-green-300 font-medium">Tipos de capas en los puros</p>
+      <p class="mt-2 text-center text-green-300 font-medium">Tipos de capas del puro</p>
     </div>
-
     <!-- Video 9 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video9.mp4')">
       <img src="images/thumb9.jpg" alt="Video 9" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
       <p class="mt-2 text-center text-green-300 font-medium">Detalles del secado</p>
     </div>
-
     <!-- Video 10 -->
     <div class="cursor-pointer group" onclick="openModal('videos/video10.mp4')">
       <img src="images/thumb10.jpg" alt="Video 10" class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300">
@@ -128,7 +120,7 @@
     </div>
   </section>
 
-  <!-- Modal -->
+  <!-- Modal para reproducir videos -->
   <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-50">
     <div class="relative w-full max-w-4xl aspect-video px-4">
       <button onclick="closeModal()" class="absolute top-0 right-0 mt-2 mr-2 text-white text-3xl font-bold z-10">&times;</button>
@@ -144,7 +136,7 @@
     © 2025 Vegas de Breña Alta. Todos los derechos reservados.
   </footer>
 
-  <!-- Script -->
+  <!-- Script para modal -->
   <script>
     function openModal(videoUrl) {
       const video = document.getElementById('videoPlayer');
