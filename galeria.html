@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería - Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+  
+  <!-- LightGallery -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/fullscreen/lg-fullscreen.min.js"></script>
+
   <style>
     body {
       background-image: url('images/fondo-galeria.jpg');
@@ -17,6 +24,7 @@
   </style>
 </head>
 <body class="text-gray-100">
+
   <!-- Navegación -->
   <header class="bg-black bg-opacity-60 shadow-md sticky top-0 z-50 backdrop-blur">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
@@ -35,31 +43,25 @@
   <section class="py-20 min-h-[calc(100vh-160px)]">
     <div class="max-w-6xl mx-auto px-2 sm:px-4 bg-black bg-opacity-40 backdrop-blur-sm rounded-xl p-4 sm:p-6">
       <h2 class="text-3xl sm:text-4xl font-bold text-green-200 text-center mb-10 sm:mb-12">Galería de Imágenes</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-        <!-- Imagen 1 -->
-        <div onclick="abrirImagen('images/galeria1.jpg')" class="overflow-hidden rounded-lg shadow-xl aspect-[4/3] cursor-pointer">
-          <img src="images/galeria1.jpg" alt="Tabaco artesanal 1" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
-        </div>
-        <!-- Imagen 2 -->
-        <div onclick="abrirImagen('images/galeria2.jpg')" class="overflow-hidden rounded-lg shadow-xl aspect-[4/3] cursor-pointer">
-          <img src="images/galeria2.jpg" alt="Tabaco artesanal 2" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
-        </div>
-        <!-- Imagen 3 -->
-        <div onclick="abrirImagen('images/galeria3.jpg')" class="overflow-hidden rounded-lg shadow-xl aspect-[4/3] cursor-pointer">
-          <img src="images/galeria3.jpg" alt="Tabaco artesanal 3" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
-        </div>
-        <!-- Imagen 4 -->
-        <div onclick="abrirImagen('images/galeria4.jpg')" class="overflow-hidden rounded-lg shadow-xl aspect-[4/3] cursor-pointer">
-          <img src="images/galeria4.jpg" alt="Fábrica de tabaco" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
-        </div>
-        <!-- Imagen 5 -->
-        <div onclick="abrirImagen('images/galeria5.jpg')" class="overflow-hidden rounded-lg shadow-xl aspect-[4/3] cursor-pointer">
-          <img src="images/galeria5.jpg" alt="Producción de tabaco" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
-        </div>
-        <!-- Imagen 6 -->
-        <div onclick="abrirImagen('images/galeria6.jpg')" class="overflow-hidden rounded-lg shadow-xl aspect-[4/3] cursor-pointer">
-          <img src="images/galeria6.jpg" alt="Hoja de tabaco" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
-        </div>
+      <div id="lightgallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <a href="images/galeria1.jpg" data-sub-html="<h4>Tabaco artesanal 1</h4>">
+          <img src="images/galeria1.jpg" class="rounded-lg shadow-xl w-full object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <a href="images/galeria2.jpg" data-sub-html="<h4>Tabaco artesanal 2</h4>">
+          <img src="images/galeria2.jpg" class="rounded-lg shadow-xl w-full object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <a href="images/galeria3.jpg" data-sub-html="<h4>Tabaco artesanal 3</h4>">
+          <img src="images/galeria3.jpg" class="rounded-lg shadow-xl w-full object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <a href="images/galeria4.jpg" data-sub-html="<h4>Fábrica de tabaco</h4>">
+          <img src="images/galeria4.jpg" class="rounded-lg shadow-xl w-full object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <a href="images/galeria5.jpg" data-sub-html="<h4>Producción de tabaco</h4>">
+          <img src="images/galeria5.jpg" class="rounded-lg shadow-xl w-full object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <a href="images/galeria6.jpg" data-sub-html="<h4>Hoja de tabaco</h4>">
+          <img src="images/galeria6.jpg" class="rounded-lg shadow-xl w-full object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
       </div>
     </div>
   </section>
@@ -69,16 +71,54 @@
     <p class="text-xs text-gray-300">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Reproductor de música -->
+  <audio id="musicaFondo" loop>
+    <source src="audio/chan-chan.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <!-- Botón para controlar la música -->
+  <div class="fixed bottom-4 left-4 z-50 bg-black bg-opacity-60 text-white px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-opacity-80 transition" onclick="toggleMusica()">
+    🎵 Música
+  </div>
+
   <!-- Scripts -->
-  <script src="https://unpkg.com/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
   <script>
-    function abrirImagen(src) {
-      basicLightbox.create(`
-        <img src="${src}" class="w-full max-w-4xl rounded-lg shadow-2xl transition duration-500 ease-in-out transform hover:scale-105"/>
-      `).show()
+    // Inicializar galería
+    lightGallery(document.getElementById('lightgallery'), {
+      selector: 'a',
+      plugins: [lgZoom, lgThumbnail, lgFullscreen],
+      speed: 500,
+      download: false,
+      mode: 'lg-fade',
+      hideBarsDelay: 3000
+    });
+
+    // Música
+    const musica = document.getElementById('musicaFondo');
+    let reproduciendo = false;
+
+    function toggleMusica() {
+      if (reproduciendo) {
+        musica.pause();
+      } else {
+        musica.play();
+      }
+      reproduciendo = !reproduciendo;
     }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        musica.volume = 0.3;
+        musica.play().catch(() => {
+          // Espera interacción en móviles
+        });
+        reproduciendo = true;
+      }, 1000);
+    });
   </script>
 </body>
 </html>
+
 
 
