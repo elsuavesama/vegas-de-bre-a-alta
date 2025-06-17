@@ -44,7 +44,7 @@
 <body class="fade-in text-gray-100 min-h-screen flex flex-col">
 
   <!-- Header -->
-  <header id="main-header" class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 transition-all duration-300 shadow-md">
+  <header class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
       <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
       <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
@@ -69,30 +69,36 @@
     </div>
   </main>
 
-  <!-- Redes sociales -->
-  <section class="pb-6">
-    <div class="flex justify-center gap-4 flex-wrap">
+  <!-- Footer con botones de redes sociales -->
+  <footer class="mt-auto text-center bg-black bg-opacity-50">
+    <!-- Botones de redes -->
+    <div class="py-6 flex justify-center gap-4 flex-wrap">
       <a class="bg-blue-500/80 hover:bg-blue-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.342v21.316C0 23.4.6 24 1.342 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.464.098 2.796.142v3.24h-1.918c-1.504 0-1.794.715-1.794 1.76v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.658V1.342C24 .6 23.4 0 22.675 0z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white" viewBox="0 0 24 24">
+          <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.342v21.316C0 23.4.6 24 1.342 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.464.098 2.796.142v3.24h-1.918c-1.504 0-1.794.715-1.794 1.76v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.658V1.342C24 .6 23.4 0 22.675 0z"/>
+        </svg>
         Facebook
       </a>
 
       <a class="bg-pink-500/80 hover:bg-pink-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white" viewBox="0 0 24 24"><path d="M12.004 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.33 3.608 1.304.975.975 1.241 2.242 1.304 3.608.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.33 2.633-1.304 3.608-.975.975-2.242 1.241-3.608 1.304-1.265.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.33-3.608-1.304-.975-.975-1.241-2.242-1.304-3.608C2.175 15.587 2.163 15.207 2.163 12s.012-3.584.07-4.85c.063-1.366.33-2.633 1.304-3.608.975-.975 2.242-1.241 3.608-1.304C8.42 2.175 8.8 2.163 12.004 2.163zm0 1.837c-3.147 0-3.51.012-4.743.068-1.132.053-1.743.243-2.15.406a4.388 4.388 0 0 0-1.597 1.04 4.388 4.388 0 0 0-1.04 1.597c-.163.407-.353 1.018-.406 2.15-.056 1.233-.068 1.596-.068 4.743s.012 3.51.068 4.743c.053 1.132.243 1.743.406 2.15.24.596.577 1.134 1.04 1.597.463.463 1.001.8 1.597 1.04.407.163 1.018.353 2.15.406 1.233.056 1.596.068 4.743.068s3.51-.012 4.743-.068c1.132-.053 1.743-.243 2.15-.406.596-.24 1.134-.577 1.597-1.04.463-.463.8-1.001 1.04-1.597.163-.407.353-1.018.406-2.15.056-1.233.068-1.596.068-4.743s-.012-3.51-.068-4.743c-.053-1.132-.243-1.743-.406-2.15a4.388 4.388 0 0 0-1.04-1.597 4.388 4.388 0 0 0-1.597-1.04c-.407-.163-1.018-.353-2.15-.406-1.233-.056-1.596-.068-4.743-.068zm0 3.565a6.272 6.272 0 1 1 0 12.544 6.272 6.272 0 0 1 0-12.544zm0 10.35a4.078 4.078 0 1 0 0-8.156 4.078 4.078 0 0 0 0 8.156zm6.406-11.699a1.456 1.456 0 1 1-2.913 0 1.456 1.456 0 0 1 2.913 0z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white" viewBox="0 0 24 24">
+          <path d="M12.004 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.33 3.608 1.304.975.975 1.241 2.242 1.304 3.608.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.33 2.633-1.304 3.608-.975.975-2.242 1.241-3.608 1.304-1.265.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.33-3.608-1.304-.975-.975-1.241-2.242-1.304-3.608C2.175 15.587 2.163 15.207 2.163 12s.012-3.584.07-4.85c.063-1.366.33-2.633 1.304-3.608.975-.975 2.242-1.241 3.608-1.304C8.42 2.175 8.8 2.163 12.004 2.163zm0 1.837a6.272 6.272 0 1 1 0 12.544 6.272 6.272 0 0 1 0-12.544zm6.406-1.488a1.456 1.456 0 1 1-2.913 0 1.456 1.456 0 0 1 2.913 0z"/>
+        </svg>
         Instagram
       </a>
 
       <a class="bg-green-500/80 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white" viewBox="0 0 24 24"><path d="M20.52 3.48a12 12 0 1 0 0 17.04 12 12 0 0 0 0-17.04ZM12 22C6.48 22 2 17.52 2 12a9.95 9.95 0 0 1 1.57-5.35l3.55 3.56v.01A6.3 6.3 0 0 0 7 12c0 2.75 2.25 5 5 5 1.09 0 2.09-.35 2.9-.94l3.57 3.56A9.98 9.98 0 0 1 12 22Zm8.44-4.12-4.1-4.09A4.89 4.89 0 0 0 17 12a5 5 0 0 0-5-5c-.83 0-1.6.21-2.27.59l-4.09-4.1A9.97 9.97 0 0 1 12 2c5.52 0 10 4.48 10 10 0 2.25-.74 4.32-1.97 5.88Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white" viewBox="0 0 24 24">
+          <path d="M20.52 3.48a12 12 0 1 0 0 17.04 12 12 0 0 0 0-17.04ZM12 22C6.48 22 2 17.52 2 12a9.95 9.95 0 0 1 1.57-5.35l3.55 3.56v.01A6.3 6.3 0 0 0 7 12c0 2.75 2.25 5 5 5 1.09 0 2.09-.35 2.9-.94l3.57 3.56A9.98 9.98 0 0 1 12 22Z"/>
+        </svg>
         WhatsApp
       </a>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="mt-auto text-center py-4 bg-black bg-opacity-50">
-    <p class="text-xs text-gray-300">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
+    <!-- Texto legal -->
+    <p class="text-xs text-gray-300 pb-4">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
   </footer>
 
 </body>
 </html>
+
