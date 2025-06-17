@@ -69,70 +69,19 @@
   <!-- Galería de videos -->
   <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
     <!-- Video thumbnails automáticos -->
-    <!-- Lista manual de los 10 videos -->
     <!-- Video 1 al 10 -->
     <!-- Puedes repetir este bloque cambiando el número -->
-    <div class="cursor-pointer group" onclick="openModal('videos/video1.mp4')">
+    <!-- Bloques de videos (idénticos al anterior) -->
+    " + Array.from({length: 10}, (_, i) => {
+      const n = i + 1;
+      return `
+    <div class="cursor-pointer group" onclick="openModal('videos/video${n}.mp4')">
       <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video1.mp4" type="video/mp4">
-        Tu navegador no soporta la etiqueta de video.
+        <source src="videos/video${n}.mp4" type="video/mp4">
       </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 1</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video2.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video2.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 2</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video3.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video3.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 3</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video4.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video4.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 4</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video5.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video5.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 5</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video6.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video6.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 6</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video7.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video7.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 7</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video8.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video8.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 8</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video9.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video9.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 9</p>
-    </div>
-    <div class="cursor-pointer group" onclick="openModal('videos/video10.mp4')">
-      <video class="rounded-lg shadow-lg group-hover:opacity-80 transition duration-300" muted>
-        <source src="videos/video10.mp4" type="video/mp4">
-      </video>
-      <p class="mt-2 text-center text-green-300 font-medium">Video 10</p>
-    </div>
+      <p class="mt-2 text-center text-green-300 font-medium">Video ${n}</p>
+    </div>`;
+    }).join("\n") + "
   </section>
 
   <!-- Modal para reproducir videos -->
@@ -183,4 +132,5 @@
   </script>
 </body>
 </html>
+
 
