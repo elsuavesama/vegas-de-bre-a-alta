@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto - Vegas de Breña Alta</title>
+  <title>Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&display=swap" rel="stylesheet" />
 
   <style>
     html {
@@ -21,6 +21,13 @@
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-color: black;
+    }
+
+    .titulo {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .parrafo {
       font-family: 'Lora', serif;
     }
 
@@ -34,20 +41,18 @@
     }
   </style>
 </head>
-
 <body class="fade-in text-gray-100 min-h-screen flex flex-col">
+
   <!-- Header de navegación -->
-  <header id="main-header" class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 shadow-md">
+  <header id="main-header" class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 transition-all duration-300 shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-      <h1 class="text-xl sm:text-2xl font-bold text-green-200 hover:scale-105 transition">
-        Vegas de Breña Alta
-      </h1>
-      <nav class="flex flex-wrap justify-center gap-3 text-gray-200 text-sm sm:text-base">
-        <a href="index.html" class="hover:text-green-300 transition">Inicio</a>
-        <a href="nosotros.html" class="hover:text-green-300 transition">Nosotros</a>
-        <a href="productos.html" class="hover:text-green-300 transition">Productos</a>
-        <a href="galeria.html" class="hover:text-green-300 transition">Galería</a>
-        <a href="contacto.html" class="text-green-300 font-semibold underline transition">Contacto</a>
+      <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
+      <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
+        <a href="index.html" class="hover:text-green-300">Inicio</a>
+        <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
+        <a href="productos.html" class="hover:text-green-300">Productos</a>
+        <a href="galeria.html" class="hover:text-green-300">Galería</a>
+        <a href="contacto.html" class="text-green-300 font-semibold">Contacto</a>
       </nav>
     </div>
   </header>
