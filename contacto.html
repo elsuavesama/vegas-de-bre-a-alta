@@ -43,19 +43,38 @@
 </head>
 <body class="fade-in text-gray-100 min-h-screen flex flex-col">
 
-  <!-- Header de navegación -->
-  <header id="main-header" class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 transition-all duration-300 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+  <!-- Encabezado unificado -->
+  <header class="bg-black bg-opacity-60 shadow-md sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
-      <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
+
+      <!-- Botón hamburguesa -->
+      <button id="menu-btn" class="sm:hidden text-green-200 focus:outline-none" aria-label="Menú">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menú escritorio -->
+      <nav id="menu-desktop" class="hidden sm:flex gap-4 text-sm sm:text-base text-gray-200">
         <a href="index.html" class="hover:text-green-300">Inicio</a>
         <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
         <a href="productos.html" class="hover:text-green-300">Productos</a>
         <a href="galeria.html" class="hover:text-green-300">Galería</a>
-        <a href="videos.html" class="hover:text-green-300">Detras del puro</a>
+        <a href="videos.html" class="hover:text-green-300">Detrás del puro</a>
         <a href="contacto.html" class="text-green-300 font-semibold">Contacto</a>
       </nav>
     </div>
+
+    <!-- Menú hamburguesa móvil -->
+    <nav id="menu-mobile" class="sm:hidden hidden flex flex-col items-center gap-3 text-gray-200 text-sm py-2">
+      <a href="index.html" class="hover:text-green-300">Inicio</a>
+      <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
+      <a href="productos.html" class="hover:text-green-300">Productos</a>
+      <a href="galeria.html" class="hover:text-green-300">Galería</a>
+      <a href="videos.html" class="hover:text-green-300">Detrás del puro</a>
+      <a href="contacto.html" class="text-green-300 font-semibold">Contacto</a>
+    </nav>
   </header>
 
   <!-- Contenido principal -->
@@ -64,7 +83,6 @@
       <h2 class="text-3xl sm:text-4xl font-bold text-green-200 mb-6 text-center">Contáctanos</h2>
       <p class="text-base sm:text-lg text-gray-300 mb-6 text-center">Puedes escribirnos, llamarnos o enviarnos un WhatsApp. Te responderemos lo antes posible.</p>
 
-      <!-- Información de contacto -->
       <div class="space-y-3 text-sm sm:text-base text-left text-gray-200 mb-8">
         <p><span class="text-green-400 font-semibold">📧 Email:</span> info@vegasbrena.com</p>
         <p><span class="text-green-400 font-semibold">📞 Teléfono:</span> +34 922 123 456</p>
@@ -117,5 +135,14 @@
   <footer class="text-center py-4 mt-auto bg-black bg-opacity-60">
     <p class="text-xs text-gray-300">&copy; 2025 Vegas de Breña Alta. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Script menú hamburguesa -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('menu-mobile');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
