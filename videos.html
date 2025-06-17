@@ -2,31 +2,58 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Videos - Vegas de Breña Alta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&display=swap" rel="stylesheet" />
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-image: url('images/fondo-videos.jpg');
+      background-image: url('images/hero-vegas.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
+      background-color: black;
+    }
+
+    .titulo {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .parrafo {
+      font-family: 'Lora', serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+<body class="fade-in text-gray-100 min-h-screen flex flex-col">
 
-<body class="text-white min-h-screen">
-  <!-- Encabezado -->
-  <header class="bg-black bg-opacity-60 shadow-md sticky top-0 z-50 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
-      <h1 class="text-3xl text-green-400 font-bold">Vegas de Breña Alta</h1>
-      <nav class="space-x-4 mt-2 sm:mt-0">
-        <a href="index.html" class="hover:underline">Inicio</a>
-        <a href="productos.html" class="hover:underline">Productos</a>
-        <a href="galeria.html" class="hover:underline">Galería</a>
-        <a href="nosotros.html" class="hover:underline">Nosotros</a>
-        <a href="contacto.html" class="hover:underline">Contacto</a>
+  <!-- Header -->
+  <header class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+      <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
+      <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
+        <a href="index.html" class="hover:text-green-300">Inicio</a>
+        <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
+        <a href="productos.html" class="hover:text-green-300">Productos</a>
+        <a href="galeria.html" class="hover:text-green-300">Galería</a>
+        <a href="galeria.html" class="text-green-300 font-semibold">Detras del Puro</a>
+        <a href="contacto.html" class="hover:text-green-300">Contacto</a>
       </nav>
     </div>
   </header>
