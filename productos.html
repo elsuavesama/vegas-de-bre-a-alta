@@ -3,40 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Productos - Vegas de Breña Alta</title>
+  <title>Vegas de Breña Alta</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    html {
+      scroll-behavior: smooth;
     }
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
+
     body {
-      background-image: url('images/fondo-productos.jpg');
+      background-image: url('images/hero-vegas.jpg');
       background-size: cover;
-      background-position: center center;
+      background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
-      background-color: rgba(0, 0, 0, 0.6);
-      background-blend-mode: darken;
+      background-color: black;
     }
-    
   </style>
 </head>
-<body class="text-gray-100">
-  <header class="w-full bg-black bg-opacity-60 backdrop-blur-sm fixed top-0 left-0 z-50">
+<body class="text-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header de navegación -->
+  <header id="main-header" class="bg-black bg-opacity-60 backdrop-blur sticky top-0 z-50 transition-all duration-300 shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-      <h1 class="text-2xl font-bold text-green-800">Vegas de Breña Alta</h1>
-      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-gray-200 text-sm sm:text-base w-full text-center transition-all duration-300 ease-in-out">
-        <a href="index.html" class="hover:underline">Inicio</a>
-        <a href="nosotros.html" class="hover:underline">Nosotros</a>
+      <h1 class="text-xl sm:text-2xl font-bold text-green-200">Vegas de Breña Alta</h1>
+      <nav class="flex flex-wrap justify-center gap-3 text-gray-200">
+        <a href="index.html" class="text-green-300 font-semibold">Inicio</a>
+        <a href="nosotros.html" class="hover:text-green-300">Nosotros</a>
         <a href="productos.html" class="text-green-700 font-semibold underline">Productos</a>
-        <a href="galeria.html" class="hover:underline">Galería</a>
-        <a href="contacto.html" class="hover:underline">Contacto</a>
+        <a href="galeria.html" class="hover:text-green-300">Galería</a>
+        <a href="contacto.html" class="hover:text-green-300">Contacto</a>
       </nav>
     </div>
   </header>
